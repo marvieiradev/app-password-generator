@@ -5,10 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
     <title>Gerador de Sanhas</title>
 </head>
 
 <body>
+    <div>
+        <h2>Gerador de Senhas</h2>
+        <div class="wrapper">
+            <div class="input-box">
+                <input type="text" disabled>
+                <span class="material-symbols-rounded">copy_all</span>
+            </div>
+            <div class="pass-indicator">
+                <div class="pass-length">
+                    <div class="details">
+                        <label class="title">Tamanho da Senha</label>
+                        <span></span>
+                    </div>
+                    <input type="range" min="1" max="32" value="15" step="1">
+                </div>
+                <div class="pass-settings">
+                    <label class="title">Opções de Senhas</label>
+                    <ul class="options">
+                        <li class="option">
+                            <input type="checkbox" id="lowercase" checked>
+                            <label for="lowercase">Minusculas (a-z)</label>
+                        </li>
+                        <li class="option">
+                            <input type="checkbox" id="uppercase">
+                            <label for="uppercase">Maiúsculas (A-Z)</label>
+                        </li>
+                        <li class="option">
+                            <input type="checkbox" id="numbers">
+                            <label for="numbers">Números (0-9)</label>
+                        </li>
+                        <li class="option">
+                            <input type="checkbox" id="symbols">
+                            <label for="symbols">Símbolos (!-$^+)</label>
+                        </li>
+                        <li class="option">
+                            <input type="checkbox" id="exec-dupicate">
+                            <label for="exec-dupicate">Excluir Duplicadas</label>
+                        </li>
+                        <li class="option">
+                            <input type="checkbox" id="space">
+                            <label for="space">Adicionar Espaços</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="generate-btn">Gerar Senha</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
